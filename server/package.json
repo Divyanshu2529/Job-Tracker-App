@@ -2,7 +2,7 @@
   "name": "job-tracker-app",
   "version": "1.0.0",
   "description": "A full-stack Job Tracker application that allows users to manage and track their job applications. Users can create, view, update, delete, and filter job applications through a clean and simple interface.",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.js",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Divyanshu2529/Job-Tracker-App#readme",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1"
   },
   "devDependencies": {
