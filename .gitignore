@@ -1,2 +1,14 @@
-node_modules
+# dependencies 
+node_modules/
+
+# env files 
 .env
+**/.env
+
+# misc
+.DS_Store
+.vscode/
+
+# prisma generated files 
+server/prisma/generated/
+server/src/generated/
