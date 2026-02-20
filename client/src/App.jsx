@@ -103,11 +103,11 @@ export default function App() {
   return (
     
     <div
-      className="min-h-screen bg-cover bg-center"
+      className="min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bg})` }}
     >
       {/* dark overlay + optional blur so UI stays readable */}
-      <div className="min-h-screen backdrop-blur-sm bg-black/60 text-gray-100 p-8">
+      <div className="min-h-screen p-8 text-white">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
@@ -130,7 +130,7 @@ export default function App() {
           {/* Create Job */}
           <form
             onSubmit={createJob}
-            className="bg-gray-900 border border-gray-800 rounded-xl p-4 mb-6"
+            className="bg-black/40 border border-white/20 rounded-xl p-4 mb-6"
           >
             <h2 className="text-lg font-semibold mb-3">Add a job</h2>
 
@@ -272,7 +272,7 @@ export default function App() {
               ))}
 
               {filteredJobs.length === 0 && (
-                <div className="text-gray-400">No jobs found.</div>
+                <div className="text-gray-100">No jobs found.</div>
               )}
             </div>
           )}

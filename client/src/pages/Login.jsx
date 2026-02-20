@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { api } from "../api";
+import bg from "../assets/background.jpg";
 
 export default function Login() {
     const nav = useNavigate();
@@ -21,8 +22,11 @@ export default function Login() {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-950 text-white">
-            <form onSubmit={handleSubmit} className="w-full max-w-sm bg-gray-900 p-6 rounded-xl border border-gray-800">
+        <div
+            className="min-h-screen bg-cover bg-center flex items-center justify-center text-white"
+            style={{ backgroundImage: `url(${bg})` }}
+        >
+            <form onSubmit={handleSubmit} className="w-full max-w-sm bg-black/40 border border-white/20 p-6 rounded-xl shadow-2xl shadow-black/40">
                 <h1 className="text-2xl font-semibold mb-4">Login</h1>
 
                 {err && <div className="mb-3 text-sm bg-red-950/40 border border-red-900 p-2 rounded">{err}</div>}
