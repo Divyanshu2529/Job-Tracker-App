@@ -14,8 +14,8 @@ app.use(cors());
 
 app.get("/", (req, res) => res.json("Hi, How are you ?"));
 
-app.use("/auth", authRoutes);
-app.use("/jobs", authMiddleware, jobsRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/jobs", authMiddleware, jobsRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err);
